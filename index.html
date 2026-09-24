@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Roboto+Slab:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Lights Off</title>
+  </head>
+  <body>
+    <br />
+    <br />
+    <br />
+    <h1 id="title">Lights OFF</h1>
+    <p>
+      <i>Clicks: <span id="clicks">0</span></i>
+    </p>
+    <br />
+    <div id="reset">
+      <button id="reset_btn">RESTART</button>
+    </div>
+    <br />
+    <div id="board"></div>
+    <br /><br />
+    <div id="levels">
+      <button id="level1" class="level_btn active" data-size="3">
+        Level 1
+      </button>
+      <button id="level2" class="level_btn" data-size="4">Level 2</button>
+      <button id="level3" class="level_btn" data-size="5" ="">Level 3</button>
+    </div>
+    <div id="torch"></div>
+    <script src="main.js"></script>
+  </body>
+</html>
