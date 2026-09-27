@@ -123,6 +123,7 @@ boardElement.addEventListener("pointerdown", (e) => {
   if (isWon()) {
     gameOver = true;
     document.body.classList.add("won");
+    document.body.classList.add("no_scroll");
     console.log("Won in " + clicks + " clicks!");
     winText.textContent =
       "level " + currentLevel + " solved in " + clicks + " clicks!!";
@@ -150,6 +151,7 @@ levelElement.addEventListener("click", (e) => {
 document.getElementById("next_button").addEventListener("click", () => {
   gameOver = false;
   document.getElementById("popup").classList.remove("show");
+  document.body.classList.remove("no_scroll");
 
   if (currentLevel === 1) {
     StartGame(4, 2);
