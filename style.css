@@ -3,16 +3,56 @@
 --light: #ffc300;
 --off: #343434;*/
 
+:root {
+  --x: 20%;
+  --y: 20%;
+}
+
 body {
   background: #111111;
   margin: 10px;
+  touch-action: none;
+}
+
+#popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #1a1a22;
+  border: 2px dashed #ffc300;
+  border-radius: 10px;
+  padding: 30px 50px;
+  text-align: center;
+  z-index: 30;
+}
+
+#popup.show {
+  display: block;
+}
+
+#popup h2 {
+  color: #ffc300;
+}
+
+#next_button {
+  padding: 10px 20px;
+  border: 2px solid #ffc300;
+  border-radius: 8px;
+  background: transparent;
+  color: #ffc300;
+  cursor: pointer;
+  margin-top: 15px;
 }
 
 h1,
 p {
-  color: #e9ecef;
+  color: #e9ecefc0;
   font-family: roboto slab;
   text-align: center;
+  z-index: 20;
+  position: relative;
 }
 
 #levels,
@@ -28,7 +68,7 @@ p {
   border: 2px solid #ffc40077;
   border-radius: 8px;
   background: transparent;
-  color: #ffc400;
+  color: #ffc400ce;
   cursor: pointer;
 }
 
@@ -44,8 +84,10 @@ p {
 }
 
 #reset_btn {
-  border: 3px solid #1e6091;
-  color: #1e6091;
+  border: 3px solid #1e5f91cb;
+  color: #1e5f91d3;
+  z-index: 20;
+  position: relative;
 }
 
 #board {
@@ -63,6 +105,50 @@ p {
 }
 
 .light.on {
-  background: #ffc300;
-  box-shadow: 0 0 20px #ffc300;
+  background: #ffc400a8;
+  box-shadow: 0 0 20px #ffc400a8;
+}
+
+#torch {
+  inset: 0;
+  background:
+    radial-gradient(
+      circle at var(--x) var(--y),
+      color-mix(in srgb, #e2eafc 34%, transparent) 0px,
+      transparent 90px
+    ),
+    radial-gradient(
+      circle at var(--x) var(--y),
+      transparent 30px,
+      rgb(5, 5, 8, 0.97) 70px
+    );
+  transition: opacity 2s;
+  position: fixed;
+  z-index: 10;
+  pointer-events: none;
+}
+
+body.won #torch {
+  opacity: 0;
+}
+
+body.invert {
+  filter: invert(1);
+}
+
+.easter_egg {
+  color: #043d88;
+}
+
+h4 {
+  color: #af0f0fc7;
+}
+
+#dots {
+  font-size: 50px;
+  text-align: center;
+}
+
+h1:has(a) {
+  z-index: 0;
 }

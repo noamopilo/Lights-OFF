@@ -80,9 +80,20 @@ function isWon() {
 
 const clicksElement = document.getElementById("clicks");
 const levelElement = document.getElementById("levels");
+const levelNumElement = document.getElementById("level_num");
 
-function StartGame(newSize) {
+document.addEventListener("pointermove", (e) => {
+  document.documentElement.style.setProperty("--x", e.clientX + "px");
+  document.documentElement.style.setProperty("--y", e.clientY + "px");
+});
+
+let currentLevel = 1;
+
+function StartGame(newSize, levelNum) {
   size = newSize;
+  currentLevel = levelNum;
+  levelNumElement.textContent = levelNum;
+  document.body.classList.remove("won");
   do {
     makeBoard();
     shuffleBoard();
@@ -90,6 +101,8 @@ function StartGame(newSize) {
   DrawBoard();
   clicksElement.textContent = clicks;
 }
+
+const winText = document.getElementById("win_text");
 
 boardElement.addEventListener("pointerdown", (e) => {
   if (gameOver) {
@@ -109,17 +122,24 @@ boardElement.addEventListener("pointerdown", (e) => {
 
   if (isWon()) {
     gameOver = true;
+    document.body.classList.add("won");
     console.log("Won in " + clicks + " clicks!");
+    winText.textContent =
+      "level " + currentLevel + " solved in " + clicks + " clicks!!";
+    document.getElementById("popup").classList.add("show");
   }
 });
 
 levelElement.addEventListener("click", (e) => {
+  if (gameOver) {
+    return;
+  }
   const button = e.target.closest(".level_btn");
   if (!button) {
     return;
   }
 
-  StartGame(Number(button.dataset.size));
+  StartGame(Number(button.dataset.size), Number(button.dataset.level));
 
   document
     .querySelectorAll(".level_btn")
@@ -127,9 +147,28 @@ levelElement.addEventListener("click", (e) => {
   button.classList.add("active");
 });
 
+document.getElementById("next_button").addEventListener("click", () => {
+  gameOver = false;
+  document.getElementById("popup").classList.remove("show");
+
+  if (currentLevel === 1) {
+    StartGame(4, 2);
+    document.getElementById("level1").classList.remove("active");
+    document.getElementById("level2").classList.add("active");
+  } else if (currentLevel == 2) {
+    StartGame(5, 3);
+    document.getElementById("level2").classList.remove("active");
+    document.getElementById("level3").classList.add("active");
+  }
+});
+
 document
   .getElementById("reset_btn")
-  .addEventListener("click", () => StartGame(size));
+  .addEventListener("click", () => StartGame(size, currentLevel));
 
-StartGame(3);
+document.getElementById("on_off_light").addEventListener("click", () => {
+  document.body.classList.toggle("invert");
+});
+
+StartGame(3, 1);
 console.log(board);
