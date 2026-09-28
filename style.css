@@ -15,7 +15,25 @@ body {
 }
 
 body.no_scroll {
-    overflow: hidden;
+  overflow: hidden;
+}
+
+#readme_button {
+  position: fixed;
+  top: 3%;
+  left: 92%;
+  padding: 10px 20px;
+  border: 2px solid #ffc40077;
+  border-radius: 8px;
+  background: transparent;
+  color: #ffc400ce;
+  cursor: pointer;
+  z-index: 20;
+}
+
+#readme_a {
+  color: inherit;
+  text-decoration: none;
 }
 
 #popup {
