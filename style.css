@@ -1,8 +1,3 @@
-/*--bakground: #111111;
---torch: #e2eafc;
---light: #ffc300;
---off: #343434;*/
-
 :root {
   --x: 20%;
   --y: 20%;
@@ -20,8 +15,8 @@ body.no_scroll {
 
 #readme_button {
   position: fixed;
-  top: 3%;
-  left: 92%;
+  top: 4%;
+  left: 90%;
   padding: 10px 20px;
   border: 2px solid #ffc40077;
   border-radius: 8px;

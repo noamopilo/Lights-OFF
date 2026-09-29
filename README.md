@@ -1,4 +1,4 @@
-[![Static Badge](https://img.shields.io/badge/github-repo-blue?logo=github)](https://github.com/noamopilo/lights-OFF) [![Play](https://img.shields.io/badge/play-Lights_OFF-brightgreen?logo=html5&logoColor=white)](https://noamopilo.github.io/Lights-OFF/)
+[![Static Badge](https://img.shields.io/badge/github-repo-blue?logo=github)](https://github.com/noamopilo/lights-OFF) [![Play](https://img.shields.io/badge/play-Lights_OFF-brightgreen?logo=html5&logoColor=white)](https://nonobal-lights-off.vercel.app)
 
 # **Lights OFF**
 
@@ -31,7 +31,7 @@ When you click on a light it switches itself and all lights arround it to the op
 But you cannot see the whole grid at once because you're in the dark.
 So you need to look with your flashlight.
 
-When you finish a level you go to the next one.
+When you finish a level, you go to the next one.
 
 There are 3 levels, each one is more difficult because it has a bigger grid.
 
@@ -73,8 +73,8 @@ This is the file structure of the game:
 
 ## Made for
 
-I made this project for operation BLACKOUT of the PIXL evenement.
-A YSWS hosted by Hack Club.
+I made this project for operation BLACKOUT of the [PIXL](https://pixl.hackclub.com/en) evenement.
+A YSWS hosted by [Hack Club](https://hackclub.com/).
 
 ---
 

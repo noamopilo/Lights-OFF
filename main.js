@@ -177,4 +177,3 @@ document.getElementById("on_off_light2").addEventListener("click", () => {
 });
 
 StartGame(3, 1);
-console.log(board);
