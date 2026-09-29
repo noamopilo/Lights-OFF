@@ -2,8 +2,8 @@
 
 # **Lights OFF**
 
-Lights out (but with a twist),
-and surprises.
+A game where the goal is to turn off all the lights in the grid but when you click on a light it switches the state of every light around it. Also you need to use your flashlight to see the grid.
+And there are surprises on the page.
 
 ---
 
