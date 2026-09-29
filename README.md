@@ -12,7 +12,9 @@ and surprises.
 - [**Lights OFF**](#lights-off)
   - [Table of content](#table-of-content)
   - [How to play?](#how-to-play)
+  - [Screenshots](#screenshots)
   - [File structure](#file-structure)
+  - [Made for](#made-for)
   - [Made with](#made-with)
   - [Support](#support)
   - [License](#license)
@@ -42,6 +44,18 @@ _Can you find them all?_
 
 ---
 
+## Screenshots
+
+![alt text](image.png)
+
+![alt text](image-1.png)
+
+![alt text](image-2.png)
+
+![alt text](image-3.png)
+
+---
+
 ## File structure
 
 This is the file structure of the game:
@@ -54,6 +68,13 @@ This is the file structure of the game:
     ├── README.md
     └── style.css
 ```
+
+---
+
+## Made for
+
+I made this project for operation BLACKOUT of the PIXL evenement.
+A YSWS hosted by Hack Club.
 
 ---
 
