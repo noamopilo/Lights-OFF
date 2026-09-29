@@ -189,19 +189,62 @@ h1:has(a) {
 #on_off_light::after {
   content: "";
   position: absolute;
-  inset: 0;
+  left: 50%;
+  top: 50%;
+  width: 600px;
+  height: 600px;
+  transform: translate(-50%, -50%);
   z-index: 30;
   pointer-events: none;
-  box-shadow: 0 0 70px #ffc300;
-  animation: 2s pulse infinite;
+  background: radial-gradient(
+    circle,
+    #ffc300 0%,
+    #ffc300cc 10%,
+    #ffc30066 30%,
+    transparent 70%
+  );
+  animation: 2s pulse ease-in-out infinite;
+}
+
+#on_off_light2 {
+  border: 3px solid #ffc300;
+  border-radius: 15%;
+  background: transparent;
+  color: #ffc300;
+  cursor: pointer;
+  position: relative;
+  display: block;
+  margin-left: 17%;
+}
+
+#on_off_light2::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 600px;
+  height: 600px;
+  transform: translate(-50%, -50%);
+  z-index: 30;
+  pointer-events: none;
+  background: radial-gradient(
+    circle,
+    #ffc300 0%,
+    #ffc300cc 10%,
+    #ffc30066 30%,
+    transparent 70%
+  );
+  animation: 2s pulse ease-in-out infinite;
 }
 
 @keyframes pulse {
   0%,
   100% {
-    box-shadow: 0 0 30px #ffc300;
+    transform: translate(-50%, -50%) scale(0.85);
+    opacity: 0.8;
   }
   50% {
-    box-shadow: 0 0 70px #ffc300;
+    transform: translate(-50%, -50%) scale(1.15);
+    opacity: 1;
   }
 }

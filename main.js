@@ -172,5 +172,9 @@ document.getElementById("on_off_light").addEventListener("click", () => {
   document.body.classList.toggle("invert");
 });
 
+document.getElementById("on_off_light2").addEventListener("click", () => {
+  document.body.classList.toggle("invert");
+});
+
 StartGame(3, 1);
 console.log(board);
